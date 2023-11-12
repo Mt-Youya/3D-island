@@ -14,6 +14,11 @@ const cdnModules = [
         var: "React",
         path: `https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js`,
     },
+    {
+        name: "three",
+        var: "THREE",
+        path: `https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js`,
+    },
 ]
 
 // https://vitejs.dev/config/
