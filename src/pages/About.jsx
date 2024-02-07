@@ -1,6 +1,7 @@
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import { CTA } from "../components"
 import { experiences, skills } from "../constants"
+import Tooltip from "@mui/material/Tooltip"
 
 import "react-vertical-timeline-component/style.min.css"
 
@@ -26,13 +27,16 @@ const About = () => {
                     {skills.map((skill) => (
                         <div className="block-container w-20 h-20" key={skill.name}>
                             <div className="btn-back rounded-xl" />
-                            <div className="btn-front rounded-xl flex justify-center items-center">
-                                <img
-                                    src={skill.imageUrl}
-                                    alt={skill.name}
-                                    className="w-1/2 h-1/2 object-contain"
-                                />
-                            </div>
+                            <Tooltip title={skill.name}>
+                                <div
+                                    className="btn-front rounded-xl flex justify-center items-center hover:cursor-pointer">
+                                    <img
+                                        src={skill.imageUrl}
+                                        alt={skill.name} title={skill.name}
+                                        className="w-1/2 h-1/2 object-contain"
+                                    />
+                                </div>
+                            </Tooltip>
                         </div>
                     ))}
                 </div>

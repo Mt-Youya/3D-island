@@ -24,7 +24,7 @@ export default function Bird() {
         }
 
         if (Ry === 0) {
-            birdRef.current.position.x += 0.01
+            birdRef.current.position.x += 0.02
             birdRef.current.position.z -= 0.01
         } else {
             birdRef.current.position.x -= 0.01
